@@ -1,0 +1,20 @@
+#link-menu {
+    background-color: #efefef;
+    padding: 50px 0;
+}
+#link-menu .link-menu__content ul {
+    justify-content: flex-start;
+    font-size: 16px;
+}
+#link-menu .link-menu__content ul li a {
+    color: #333;
+    transition: 0.3s ease-in-out;
+    margin-right: 5px;
+}
+#link-menu .link-menu__content ul li a:hover {
+    color: #ffc104;
+}
+#link-menu .link-menu__content ul li p {
+    margin-left: 10px;
+    color: #ffc104;
+}

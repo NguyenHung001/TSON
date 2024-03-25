@@ -1,0 +1,86 @@
+header {
+    width: 100%;
+    height: 100vh;
+}
+.header__content__top {
+    height: 44px;
+    background-color: #00254a;
+}
+.header__content__top .contact ul li ,
+.header__content__top .form ul  li {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+}
+.header__content__top .contact ul li {
+    margin-right: 25px;
+}
+.header__content__top .contact ul li i {
+    margin-right: 5px;
+}
+.header__content__top .form ul  li  {
+    margin-left: 25px;
+}
+.header__content__top .form ul li i {
+    margin-right: 5px;
+}
+.header__content__top a {
+    font-size: 14px;
+    transition: .3s ease;
+}
+.header__content__top li:hover a {
+    color: #ffc104;
+}
+.header__content__bottom {
+    background-color: #fff;
+}
+.header__content__bottom a {
+    color: #222;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 800;
+    transition: 0.2s ease-in-out;
+}
+.header__content__bottom a:hover {
+    color: #ffc104;
+}
+.header__content__bottom li {
+    margin: 0 10px;
+    padding: 31px 10px;
+}
+.header__content__bottom .cart a {
+    font-size: 20px;
+} 
+.header__content__bottom .dropdown {
+    position: relative;
+} 
+.header__content__bottom .dropdown .menu-dropdown {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    width: 230px;
+    background-color: #333;
+    padding: 10px 15px;
+    display: none;
+    height: 0;
+    transition: 0.3s ease-in;
+    border-top: 2px solid #ffc104;
+}
+.header__content__bottom .dropdown:hover .menu-dropdown {
+    display: block;
+    height: auto;
+}
+.header__content__bottom .dropdown .menu-dropdown li {
+    padding: 5px 0;
+    margin: 5px 0;
+}
+.header__content__bottom .dropdown .menu-dropdown li a:hover {
+    color: #ffc104;
+}
+.header__content__bottom .dropdown .menu-dropdown li a {
+    color: #fff;
+    font-weight: 500;
+    font-size: 13;
+    text-transform: capitalize;
+}

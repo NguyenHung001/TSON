@@ -1,0 +1,81 @@
+footer {
+    background-image: url(../imgs/footer-bg-3.webp);
+    padding: 30px 0;
+}
+.footer__top {
+    display: flex;
+    padding: 50px 0;
+    border-bottom: 1px solid #ffc104;
+}
+.footer__top .item.item1 {
+    width: 33%;
+    padding-right: 20px;
+}
+.footer__top .item {
+    width: 20%;
+    margin-right: 20px;
+}
+.footer__top .item.item1 .logo p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    line-height: 27px;
+    margin: 20px 0;
+}
+.footer__top .item.item1 .showroom h3 a {
+    color: #fff;
+    margin-top: 20px;
+    border-bottom: 1px solid #fff;
+    font-size: 18px;
+    display: inline-block;
+    padding-bottom: 4px;
+    margin-bottom: 20px;
+}
+.footer__top .item1 .showroom .adress li {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    line-height: 27px;
+    margin-bottom: 2px;
+}
+.footer__top .item  h4 {
+    margin-bottom: 35px;
+    position: relative;
+    font-weight: 500;
+    color: #ffc104;
+    font-size: 24px;
+}
+.footer__top .item ul li {
+    color: #ffc104;
+    font-size: 14px;   
+     font-weight: 400;
+     margin-bottom: 20px;
+}
+.footer__top .item ul li i {
+    font-size: 8px;
+    margin-right: 10px;
+}
+.footer__top .item ul li span {
+    transition: 0.3s ease-in-out;
+}
+.footer__top .item ul li:hover span {
+    color: #ffc104;
+}
+.footer__bottom {
+    padding: 20px 0; 
+}
+.footer__bottom .copy-right span {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+.footer__bottom .contact i {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    margin-left: 30px;
+    transition: 0.3s ease-in-out;
+}
+.footer__bottom .contact i:hover {
+    color: #ffc104;
+}

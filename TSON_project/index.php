@@ -37,11 +37,11 @@
               <ul class="flex-center">
                 <li>
                   <i class="fa-solid fa-lock"></i>
-                  <a href="#">Đăng kí</a>
+                  <a href="./register.php">Đăng kí</a>
                 </li>
                 <li>
                   <i class="fa-solid fa-user"></i>
-                  <a href="#">Đăng nhập</a>
+                  <a href="./login.php">Đăng nhập</a>
                 </li>
                 <li>
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -57,7 +57,7 @@
             </div>
             <div class="menu">
               <ul class="flex-center">
-                <li class="boder-bottom"><a href="index.php">trang chủ</a></li>
+                <li><a class="active" href="index.php">trang chủ</a></li>
                 <li class="dropdown">
                   <a href="products.php"
                     >Sản phẩm
@@ -328,7 +328,7 @@
                         <div class="project__item">
                             <div class="project-overlay ">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <p>DỰ ÁN TUIGIGIs</p>
+                                <p>DỰ ÁN TUIGIGI</p>
                             </div>
                             <img src="./assets/imgs/project2.webp" alt="">
                         </div>

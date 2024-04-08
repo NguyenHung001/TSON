@@ -38,11 +38,11 @@
               <ul class="flex-center">
                 <li>
                   <i class="fa-solid fa-lock"></i>
-                  <a href="#">Đăng kí</a>
+                  <a href="./register.php">Đăng kí</a>
                 </li>
                 <li>
                   <i class="fa-solid fa-user"></i>
-                  <a href="#">Đăng nhập</a>
+                  <a href="./login.php">Đăng nhập</a>
                 </li>
                 <li>
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -74,7 +74,7 @@
                     </ul>
                   </div>
                 </li>
-                <li class="boder-bottom"><a href="services.php">dịch vụ</a></li>
+                <li><a class="active" href="services.php">dịch vụ</a></li>
                 <li><a href="news.php">tin tức</a></li>
                 <li><a href="contact.php">liên hệ</a></li>
               </ul>
@@ -89,6 +89,143 @@
         </div>
       </div>
     </header>
+           <!-- LINK MENU -->
+           <div id="link-menu">
+            <div class="container">
+                <div class="link-menu__content">
+                    <ul class="flex-center">
+                        <li>
+                            <a href="index.php">Trang chủ </a>
+                            <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                        <li>
+                            <p>Dịch vụ</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       <!-- SERVICES -->
+       <div class="services">
+        <div class="container">
+            <h2 class="title">DỊCH VỤ</h2>
+            <div class="services__content">
+                <div class="service__item">
+                    <div class="img">
+                        <div class="service__overlay flex-center">
+                            <a href="" class="btn">Chi tiết</a>
+                        </div>
+                        <img src="./assets/imgs/service-1.webp" alt="">
+                    </div>
+                    <div class="name">
+                        <h4>Xây dựng hệ thống điện</h4>
+                    </div>
+                    <div class="content">
+                        <p>Hệ thống điện, nước lâu ngày sẽ có những hỏng hóc ngoài ý muốn làm phiền cuộc sống của bạn. Hãy liên hệ với chúng...</p>
+                    </div>
+                </div>
+                <div class="service__item">
+                    <div class="img">
+                        <div class="service__overlay flex-center">
+                            <a href="" class="btn">Chi tiết</a>
+                        </div>
+                        <img src="./assets/imgs/service-2.webp" alt="">
+                    </div>
+                    <div class="name">
+                        <h4>Sữa điều hòa tại nhà</h4>
+                    </div>
+                    <div class="content">
+                        <p>Hệ thống điện, nước lâu ngày sẽ có những hỏng hóc ngoài ý muốn làm phiền cuộc sống của bạn. Hãy liên hệ với chúng...</p>
+                    </div>
+                </div>
+                <div class="service__item">
+                    <div class="img">
+                        <div class="service__overlay flex-center">
+                            <a href="" class="btn">Chi tiết</a>
+                        </div>
+                        <img src="./assets/imgs/service-3.webp" alt="">
+                    </div>
+                    <div class="name">
+                        <h4>Sữa chữa  và bảo trì</h4>
+                    </div>
+                    <div class="content">
+                        <p>Hệ thống điện, nước lâu ngày sẽ có những hỏng hóc ngoài ý muốn làm phiền cuộc sống của bạn. Hãy liên hệ với chúng...</p>
+                    </div>
+                </div>
+                <div class="service__item">
+                    <div class="img">
+                        <div class="service__overlay flex-center">
+                            <a href="" class="btn">Chi tiết</a>
+                        </div>
+                        <img src="./assets/imgs/service-4.webp" alt="">
+                    </div>
+                    <div class="name">
+                        <h4>Điện công nghiệp</h4>
+                    </div>
+                    <div class="content">
+                        <p>Hệ thống điện, nước lâu ngày sẽ có những hỏng hóc ngoài ý muốn làm phiền cuộc sống của bạn. Hãy liên hệ với chúng...</p>
+                    </div>
+                </div>
+                <div class="service__item">
+                    <div class="img">
+                        <div class="service__overlay flex-center">
+                            <a href="" class="btn">Chi tiết</a>
+                        </div>
+                        <img src="./assets/imgs/service-1.webp" alt="">
+                    </div>
+                    <div class="name">
+                        <h4>Khắc phục sự cố hệ thống</h4>
+                    </div>
+                    <div class="content">
+                        <p>Hệ thống điện, nước lâu ngày sẽ có những hỏng hóc ngoài ý muốn làm phiền cuộc sống của bạn. Hãy liên hệ với chúng...</p>
+                    </div>
+                </div>
+                <div class="service__item">
+                    <div class="img">
+                        <div class="service__overlay flex-center">
+                            <a href="" class="btn">Chi tiết</a>
+                        </div>
+                        <img src="./assets/imgs/service-2.webp" alt="">
+                    </div>
+                    <div class="name">
+                        <h4>Lắp đặt bình nóng lạnh</h4>
+                    </div>
+                    <div class="content">
+                        <p>Hệ thống điện, nước lâu ngày sẽ có những hỏng hóc ngoài ý muốn làm phiền cuộc sống của bạn. Hãy liên hệ với chúng...</p>
+                    </div>
+                </div>
+                <div class="service__item">
+                    <div class="img">
+                        <div class="service__overlay flex-center">
+                            <a href="" class="btn">Chi tiết</a>
+                        </div>
+                        <img src="./assets/imgs/service-3.webp" alt="">
+                    </div>
+                    <div class="name">
+                        <h4>Giải quyết các vấn đề rò rỉ </h4>
+                    </div>
+                    <div class="content">
+                        <p>Hệ thống điện, nước lâu ngày sẽ có những hỏng hóc ngoài ý muốn làm phiền cuộc sống của bạn. Hãy liên hệ với chúng...</p>
+                    </div>
+                </div>
+                <div class="service__item">
+                    <div class="img">
+                        <div class="service__overlay flex-center">
+                            <a href="" class="btn">Chi tiết</a>
+                        </div>
+                        <img src="./assets/imgs/service-4.webp" alt="">
+                    </div>
+                    <div class="name">
+                        <h4>Thi công điện nước</h4>
+                    </div>
+                    <div class="content">
+                        <p>Hệ thống điện, nước lâu ngày sẽ có những hỏng hóc ngoài ý muốn làm phiền cuộc sống của bạn. Hãy liên hệ với chúng...</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
         <!-- LINK MENU -->
         <div id="link-menu">
             <div class="container">

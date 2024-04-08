@@ -1,3 +1,13 @@
+<?php
+require "./connectDB.php";
+$result = mysqli_query($conn, "select * from cart");
+$data = mysqli_fetch_all($result, MYSQLI_BOTH);
+
+$totalPrice = 0;
+foreach($data as $item) {
+  $totalPrice += $item['pd_price'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -93,8 +103,45 @@
         font-weight: 600;
         color: #ffc104
       }
-      #deleteProduct i{
+      #deleteProduct a i{
         cursor: pointer;
+        color: black;
+        font-size: 25px;
+      }
+      .total-btn a {
+        background-color: #ffc104;
+        display: inline-block;
+        padding: 13px 40px;
+        transition: 0.3s ease-in-out;
+        margin-left: 20px;
+      }
+      .total-btn a:hover {
+        opacity: 0.7;
+      }
+      table td:first-child {
+        width: 15%;
+      }
+      table img {
+        width: 100%;
+        object-fit: cover;
+      }
+      #price {
+        color: #ffc104;
+      }
+      #price::after,
+      #total-price::after {
+        content: " ₫";
+      }
+      .cart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .cart a {
+        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     </style>
   </head>
@@ -120,11 +167,11 @@
               <ul class="flex-center">
                 <li>
                   <i class="fa-solid fa-lock"></i>
-                  <a href="#">Đăng kí</a>
+                  <a href="./register.php">Đăng kí</a>
                 </li>
                 <li>
                   <i class="fa-solid fa-user"></i>
-                  <a href="#">Đăng nhập</a>
+                  <a href="./login.php">Đăng nhập</a>
                 </li>
                 <li>
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -164,7 +211,6 @@
             <div class="cart">
               <a href="cart.php" class="btn">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <span id="quality"></span>
               </a>
             </div>
           </div>
@@ -201,44 +247,49 @@
                 <th>Thành tiền</th>
                 <th>Xóa</th>
               </tr>
+              <?php foreach($data as $item) { ?>
               <tr>
                 <td>
-                  <img src="./assets/imgs/cart-product1.webp" alt="" />
+                  <img src="<?php echo "./assets/imgs/".$item['image']; ?>" alt="" />
                 </td>
                 <td>
-                  <p>Cap nối điện hiện đại - Dài / Xanh</p>
+                  <p><?php echo $item['pd_name']; ?></p>
                 </td>
                 <td>
-                  <p id="prince">90.000₫</p>
+                  <span id="price"><?php echo $item['pd_price']; ?></span>
+                  
                 </td>
                 <td>
                   <div id="quality">
                     <div class="box">
                       <button onclick="minusProduct()">-</button>
-                      <span id="quality-text">1</span>
+                      <span id="quality-text"><?php echo $item['quantity']; ?></span>
                       <button onclick="plusProduct()">+</button>
                     </div>
                   </div>
                 </td>
                 <td class="price">
-                  <span id="price">180.000</span>
+                  <span class="toMoney"><?php echo $item['pd_price'] * $item['quantity']; ?></span>
                   <span>₫</span>
                 </td>
                 <td id="deleteProduct">
-                  <i class="fa-regular fa-trash-can"></i>
+                  <a href="./deleteProduct.php?id=<?php echo $item['id'] ;?>" onclick="return confirmDelete();">
+                    <i class="fa-regular fa-trash-can"></i>
+                  </a>
                 </td>
               </tr>
+              <?php } ?>
             </table>
           </div>
           <div class="total">
             <div class="total__content">
               <div class="total-price">
                 <span>Tổng tiền:</span>
-                <span id="total-price">360.000₫</span>
+                <span id="total-price"><?php echo $totalPrice; ?></span>
               </div>
               <div class="total-btn">
-                <button>Tiếp tục mua hàng</button>
-                <button>Tiếp tục đặt hàng</button>
+                <a href="./index.php">Tiếp tục mua hàng</a>
+                <a href="./order.php">Tiếp tục đặt hàng</a>
               </div>
             </div>
           </div>
@@ -398,7 +449,11 @@
         </div>
       </div>
     </footer>
-
-    <script src="./assets/js/main.js"></script>
+    <script>
+function confirmDelete() {
+  return confirm('Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng không?');
+}
+</script>
+    <!-- <script src="./assets/js/main.js"></script> -->
   </body>
 </html>

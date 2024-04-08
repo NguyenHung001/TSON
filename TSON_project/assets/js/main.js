@@ -21,15 +21,17 @@ $(document).ready(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop()) {
       $(".backtotop").fadeIn();
+      $(".header__content__bottom").addClass("fixed");
     } else {
       $(".backtotop").fadeOut();
+      $(".header__content__bottom").removeClass("fixed");
     }
   });
   $(".backtotop").click(function () {
     $("html, body").animate(
       {
         scrollTop: 0,
-      },3000
+      },2000
     );
   });
 });
@@ -38,7 +40,7 @@ $(document).ready(function () {
 function plusProduct() {
   let qualityEle = document.getElementById("quality-text").innerHTML;
   let quality = Number(qualityEle);
-  quality++;
+  quality++;  
   document.getElementById("quality-text").innerHTML = quality;
    console.log(typeof(quality))
    changePrince(quality);
@@ -59,3 +61,4 @@ function changePrince(quality) {
   let totalPrice = 90.000*quality;
   document.getElementById("price").innerHTML = totalPrice.toFixed(3);
 }
+

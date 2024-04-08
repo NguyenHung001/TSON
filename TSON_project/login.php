@@ -1,8 +1,4 @@
-<?php
-require "./connectDB.php";
-$result = mysqli_query($conn, "select * from products");
-$data = mysqli_fetch_all($result, MYSQLI_BOTH);
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +6,7 @@ $data = mysqli_fetch_all($result, MYSQLI_BOTH);
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./assets/imgs/favicon.webp" type="image/x-icon" />
-  <title>Sản phẩm</title>
+  <title>Đăng nhập</title>
   <link rel="stylesheet" href="./assets/css/variables.css" />
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/header.css" />
@@ -19,13 +15,103 @@ $data = mysqli_fetch_all($result, MYSQLI_BOTH);
   <link rel="stylesheet" href="./assets/css/link_menu.css">
   <link rel="stylesheet" href="./assets/font/fontawesome-6.5.1/css/all.min.css" />
   <style>
-    .main-products {
+    .login .container {
+      display: flex;
       padding: 50px 0;
     }
 
-    .main-products>h3 {
-      margin: 20px 0;
-      font-size: 30px;
+    form {
+      width: 50%;
+      padding-right: 60px;
+    }
+
+    .image {
+      width: 50%;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px 15px;
+      border: 1px solid #dfdfdf;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-size: 17px;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    label::after {
+      content: " *";
+      color: red;
+    }
+
+    .item {
+      margin-bottom: 20px;
+    }
+
+    .item p {
+      color: red;
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    .item h3 {
+      margin-top: 40px;
+    }
+
+    .login-btn {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    button {
+      height: 50px;
+      width: 110px;
+      background-color: #ffc104;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      margin-right: 20px;
+    }
+
+    button:hover {
+      background-color: #ffd249;
+    }
+
+    .login-btn a {
+      display: inline-block;
+      padding: 15px 25px;
+      color: white;
+      background-color: #68b1e5;
+      height: 50px;
+      transition: 0.2s ease-in-out;
+    }
+
+    form .item .error {
+      color: red;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .success p {
+      text-align: center;
+      color: green;
+      font-size: 20px;
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .success p i {
+      color: green;
     }
   </style>
 </head>
@@ -74,7 +160,7 @@ $data = mysqli_fetch_all($result, MYSQLI_BOTH);
             <ul class="flex-center">
               <li><a href="index.php">trang chủ</a></li>
               <li class="dropdown">
-                <a href="products.php" class="active">Sản phẩm
+                <a href="products.php">Sản phẩm
                   <i class="fa-solid fa-angle-right"></i>
                 </a>
                 <div class="menu-dropdown">
@@ -89,7 +175,7 @@ $data = mysqli_fetch_all($result, MYSQLI_BOTH);
               </li>
               <li><a href="services.php">dịch vụ</a></li>
               <li><a href="news.php">tin tức</a></li>
-              <li><a href="contact.php">liên hệ</a></li>
+              <li><a class="active" href="contact.php">liên hệ</a></li>
             </ul>
           </div>
           <div class="cart">
@@ -112,38 +198,46 @@ $data = mysqli_fetch_all($result, MYSQLI_BOTH);
             <i class="fa-solid fa-angle-right"></i>
           </li>
           <li>
-            <p>Tất cả sản phẩm</p>
+            <p>Đăng nhập tài khoản</p>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="main-products">
-    <h3 style="text-align: center;">Tất cả sản phẩm</h3>
+  <div class="login">
     <div class="container">
-      <div class="produsts__list">
-        <?php foreach ($data as $item) { ?>
-          <div class="item">
-            <div class="img">
-              <a href="">
-                <img src="<?php echo "./assets/imgs/" . $item['image']; ?>" alt="" />
-              </a>
-              <div class="variants">
-                <a href="./cart.php?id=<?php echo $item['id']; ?>">
-                  <i class="fa-solid fa-cart-plus"></i>
-                </a>
-                <a href="./detail-products.php?id=<?php echo $item['id']; ?>">
-                  <i class="fa-solid fa-magnifying-glass-plus"></i>
-                </a>
-              </div>
-            </div>
-            <p class="name"><?php echo $item['pd_name']; ?></p>
-            <p class="price"><?php echo $item['pd_price'] . "₫" ?></p>
-          </div>
-        <?php } ?>
+      <form action="./handle-login.php" method="post">
+        <div class="item">
+          <h3>ĐĂNG NHẬP TÀI KHOẢN</h3>
+          <p>(*) Mục không được bỏ trống.</p>
+        </div>
+        <div class="item">
+          <label for="username">Tên đăng nhập</label>
+          <input type="text" name="username" id="username" value="<?php 
+              if (!isset($success)) {
+                echo (isset($fail)) ? $usernameValue : "";
+            }
+          ?>">
+          <p class="error"><?php echo (isset($errorsLogin['username']) && !isset($success)) ? $errorsLogin['username'] : "";  ?></p>
+        </div>
+        <div class="item">
+          <label for="password">Mật khẩu</label>
+          <input type="password" name="password" id="password">
+          <p class="error"><?php echo (isset($errorsLogin['password']) && !isset($success)) ? $errorsLogin['password'] : ""; ?></p>
+        </div>
+        <div class="item login-btn">
+          <button name="login" value="login">Đăng nhập</button>
+          <a href="./forgot-pass.php">Quên mật khẩu</a>
+        </div>
+      </form>
+      
+      <div class="image">
+        <img src="./assets/imgs/about.webp" alt="">
       </div>
     </div>
-  </div>
+    <div class="success">
+        <p><?php echo (isset($success)) ? $success : ""; ?></p>
+      </div>
   </div>
   <!-- FOOTER -->
   <footer>
@@ -264,6 +358,7 @@ $data = mysqli_fetch_all($result, MYSQLI_BOTH);
       </div>
     </div>
   </footer>
+  <?php unset($data); ?>
 </body>
 
 </html>

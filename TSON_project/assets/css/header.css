@@ -84,3 +84,13 @@ header {
     font-size: 13;
     text-transform: capitalize;
 }
+.header__content__bottom li .active{
+    color: #ffc104;
+}
+.header__content__bottom.fixed {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}

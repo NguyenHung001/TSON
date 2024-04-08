@@ -38,11 +38,11 @@
               <ul class="flex-center">
                 <li>
                   <i class="fa-solid fa-lock"></i>
-                  <a href="#">Đăng kí</a>
+                  <a href="./register.php">Đăng kí</a>
                 </li>
                 <li>
                   <i class="fa-solid fa-user"></i>
-                  <a href="#">Đăng nhập</a>
+                  <a href="./login.php">Đăng nhập</a>
                 </li>
                 <li>
                   <i class="fa-solid fa-magnifying-glass"></i>
@@ -75,7 +75,7 @@
                   </div>
                 </li>
                 <li><a href="services.php">dịch vụ</a></li>
-                <li class="boder-bottom"><a href="news.php">tin tức</a></li>
+                <li><a class="active" href="news.php">tin tức</a></li>
                 <li><a href="contact.php">liên hệ</a></li>
               </ul>
             </div>
@@ -105,6 +105,164 @@
                 </div>
             </div>
         </div>
+            <!-- NEWS -->
+    <div class="news">
+        <div class="container">
+            <h2 class="title">TIN TỨC</h2>
+            <div class="news__content">
+                <div class="news__item">
+                    <div class="img">
+                        <div class="date">
+                            <h5>16</h5>
+                            <p>TH 08</p>
+                        </div>
+                        <img src="./assets/imgs/news1.webp" alt="">
+                    </div>
+                    <div class="cmt">
+                        <h3>Bài viết mẫu</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <span>Nguyên Hùng</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-comment"></i>
+                                <span>0 bình luận</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <p>Máy biến áp cách ly hay còn gọi là biến thế cách ly, là loại máy có cuộn dây sơ cấp và cuộn dây thứ cấp được ghép với nhau bằng từ, không ghép bằng điện nên cách biệt và...</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="img">
+                        <div class="date">
+                            <h5>16</h5>
+                            <p>TH 08</p>
+                        </div>
+                        <img src="./assets/imgs/news2.webp" alt="">
+                    </div>
+                    <div class="cmt">
+                        <h3>Bài viết mẫu</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <span>Nguyên Hùng</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-comment"></i>
+                                <span>33 bình luận</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <p>Máy biến áp cách ly hay còn gọi là biến thế cách ly, là loại máy có cuộn dây sơ cấp và cuộn dây thứ cấp được ghép với nhau bằng từ, không ghép bằng điện nên cách biệt và...</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="img">
+                        <div class="date">
+                            <h5>16</h5>
+                            <p>TH 08</p>
+                        </div>
+                        <img src="./assets/imgs/news3.webp" alt="">
+                    </div>
+                    <div class="cmt">
+                        <h3>Bài viết mẫu</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <span>Nguyên Hùng</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-comment"></i>
+                                <span>4 bình luận</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <p>Máy biến áp cách ly hay còn gọi là biến thế cách ly, là loại máy có cuộn dây sơ cấp và cuộn dây thứ cấp được ghép với nhau bằng từ, không ghép bằng điện nên cách biệt và...</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="img">
+                        <div class="date">
+                            <h5>16</h5>
+                            <p>TH 08</p>
+                        </div>
+                        <img src="./assets/imgs/news1.webp" alt="">
+                    </div>
+                    <div class="cmt">
+                        <h3>Bài viết mẫu</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <span>Nguyên Hùng</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-comment"></i>
+                                <span>2 bình luận</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <p>Máy biến áp cách ly hay còn gọi là biến thế cách ly, là loại máy có cuộn dây sơ cấp và cuộn dây thứ cấp được ghép với nhau bằng từ, không ghép bằng điện nên cách biệt và...</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="img">
+                        <div class="date">
+                            <h5>16</h5>
+                            <p>TH 08</p>
+                        </div>
+                        <img src="./assets/imgs/news2.webp" alt="">
+                    </div>
+                    <div class="cmt">
+                        <h3>Bài viết mẫu</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <span>Nguyên Hùng</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-comment"></i>
+                                <span>21 bình luận</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <p>Máy biến áp cách ly hay còn gọi là biến thế cách ly, là loại máy có cuộn dây sơ cấp và cuộn dây thứ cấp được ghép với nhau bằng từ, không ghép bằng điện nên cách biệt và...</p>
+                    </div>
+                </div>
+                <div class="news__item">
+                    <div class="img">
+                        <div class="date">
+                            <h5>16</h5>
+                            <p>TH 08</p>
+                        </div>
+                        <img src="./assets/imgs/news3.webp" alt="">
+                    </div>
+                    <div class="cmt">
+                        <h3>Bài viết mẫu</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-user"></i>
+                                <span>Nguyên Hùng</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-comment"></i>
+                                <span>3 bình luận</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <p>Máy biến áp cách ly hay còn gọi là biến thế cách ly, là loại máy có cuộn dây sơ cấp và cuộn dây thứ cấp được ghép với nhau bằng từ, không ghép bằng điện nên cách biệt và...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- FOOTER -->
     <footer>
         <div class="container">

@@ -2,6 +2,11 @@
 require "./connectDB.php";
 $result = mysqli_query($conn, "select * from cart");
 $data = mysqli_fetch_all($result, MYSQLI_BOTH);
+
+$totalPrice = 0;
+foreach($data as $item) {
+  $totalPrice += $item['pd_price'] * $item['quantity'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -149,6 +154,21 @@ $data = mysqli_fetch_all($result, MYSQLI_BOTH);
         .success p i {
             color: green;
         }
+        .total-price {
+            display: flex;
+            justify-content: flex-end;
+            padding: 40px 0;
+            color: #ffc104;
+    font-size: 30px;
+    font-weight: 700;
+        }
+        .total-price span:first-child {
+            color: #5c5c5c;
+            margin-right: 15px;
+        }
+        .total-price span:last-child::after {
+            content: "₫";
+        }
     </style>
 </head>
 
@@ -273,6 +293,10 @@ $data = mysqli_fetch_all($result, MYSQLI_BOTH);
 
                     </div>
                 <?php } ?>
+                <div class="total-price">
+                    <span>Tổng tiền: </span>
+                    <span><?php echo $totalPrice ?></span>
+                </div>
             </div>
             <div class="right">
                 <form action="./handle-order.php" method="post">

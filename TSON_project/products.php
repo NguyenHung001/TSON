@@ -3,6 +3,7 @@ require "./connectDB.php";
 $result = mysqli_query($conn, "select * from products");
 $data = mysqli_fetch_all($result, MYSQLI_BOTH);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -129,7 +130,7 @@ $data = mysqli_fetch_all($result, MYSQLI_BOTH);
                 <img src="<?php echo "./assets/imgs/" . $item['image']; ?>" alt="" />
               </a>
               <div class="variants">
-                <a href="./cart.php?id=<?php echo $item['id']; ?>">
+                <a href="./handle-cart.php?id=<?php echo $item['id']; ?>">
                   <i class="fa-solid fa-cart-plus"></i>
                 </a>
                 <a href="./detail-products.php?id=<?php echo $item['id']; ?>">
